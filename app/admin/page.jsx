@@ -149,12 +149,23 @@ export default function AdminPage() {
                 )}
               </div>
 
-              <div style={s.items}>
+              <div style={s.itemsPanel}>
                 {o.items.map((it, i) => (
-                  <span key={i} style={s.itemChip}>
-                    {it.qty}× {it.colorName}/{it.size}
-                    {(it.prints || []).map((p) => ` · ${p.location} (${p.size})`).join("")}
-                  </span>
+                  <div key={i} style={s.itemBlock}>
+                    <div style={s.itemMeta}>
+                      <span style={{ ...s.colorDot, background: it.color }} />
+                      {it.qty}× {it.colorName} / {it.size}
+                    </div>
+                    <div style={s.printThumbs}>
+                      {(it.prints || []).map((p, j) => (
+                        <a key={j} href={p.designUrl} target="_blank" rel="noopener noreferrer"
+                          style={s.printThumbLink} title={`Open full-size ${p.location} design (right-click → Save Image to send to DTF)`}>
+                          <img src={p.designUrl} alt={`${p.location} design`} style={s.printThumbImg} />
+                          <span style={s.printThumbLabel}>{p.location} · {p.size}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
 
@@ -230,8 +241,14 @@ const s = {
   cardHead: { display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 16 },
   badge: { marginLeft: 10, padding: "3px 10px", borderRadius: 20, fontSize: 11, fontWeight: 700, textTransform: "capitalize" },
   grid: { display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 12, marginBottom: 14 },
-  items: { display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 16 },
-  itemChip: { background: "var(--surface-2)", border: "1px solid var(--border-2)", borderRadius: 8, padding: "5px 10px", color: "#bbb", fontSize: 12 },
+  itemsPanel: { display: "flex", flexDirection: "column", gap: 14, marginBottom: 16 },
+  itemBlock: { background: "var(--surface-2)", border: "1px solid var(--border-2)", borderRadius: 10, padding: 12 },
+  itemMeta: { display: "flex", alignItems: "center", gap: 8, color: "#ddd", fontSize: 13, fontWeight: 600, marginBottom: 10 },
+  colorDot: { width: 12, height: 12, borderRadius: "50%", border: "1px solid var(--border-2)", flexShrink: 0 },
+  printThumbs: { display: "flex", gap: 10, flexWrap: "wrap" },
+  printThumbLink: { display: "flex", flexDirection: "column", alignItems: "center", gap: 6, textDecoration: "none" },
+  printThumbImg: { width: 64, height: 64, objectFit: "cover", borderRadius: 8, border: "1px solid var(--border-2)", background: "#000" },
+  printThumbLabel: { color: "var(--text-mute)", fontSize: 10, textTransform: "capitalize", textAlign: "center" },
   actions: { display: "flex", gap: 10, flexWrap: "wrap" },
   verify: { padding: "10px 20px", background: "var(--ok)", border: "none", borderRadius: 9, color: "#fff", fontWeight: 700, cursor: "pointer", fontSize: 13 },
   reject: { padding: "10px 20px", background: "rgba(255,80,80,.15)", border: "1px solid var(--danger)", borderRadius: 9, color: "var(--danger)", fontWeight: 700, cursor: "pointer", fontSize: 13 },

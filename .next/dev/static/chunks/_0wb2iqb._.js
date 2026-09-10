@@ -433,16 +433,75 @@ function AdminPage() {
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                                style: s.items,
-                                                children: o.items.map((it, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                        style: s.itemChip,
+                                                style: s.itemsPanel,
+                                                children: o.items.map((it, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                        style: s.itemBlock,
                                                         children: [
-                                                            it.qty,
-                                                            "× ",
-                                                            it.colorName,
-                                                            "/",
-                                                            it.size,
-                                                            (it.prints || []).map((p)=>` · ${p.location} (${p.size})`).join("")
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: s.itemMeta,
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                        style: {
+                                                                            ...s.colorDot,
+                                                                            background: it.color
+                                                                        }
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/admin/page.jsx",
+                                                                        lineNumber: 156,
+                                                                        columnNumber: 23
+                                                                    }, this),
+                                                                    it.qty,
+                                                                    "× ",
+                                                                    it.colorName,
+                                                                    " / ",
+                                                                    it.size
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/admin/page.jsx",
+                                                                lineNumber: 155,
+                                                                columnNumber: 21
+                                                            }, this),
+                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                style: s.printThumbs,
+                                                                children: (it.prints || []).map((p, j)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                                        href: p.designUrl,
+                                                                        target: "_blank",
+                                                                        rel: "noopener noreferrer",
+                                                                        style: s.printThumbLink,
+                                                                        title: `Open full-size ${p.location} design (right-click → Save Image to send to DTF)`,
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                                                                                src: p.designUrl,
+                                                                                alt: `${p.location} design`,
+                                                                                style: s.printThumbImg
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/admin/page.jsx",
+                                                                                lineNumber: 163,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                                style: s.printThumbLabel,
+                                                                                children: [
+                                                                                    p.location,
+                                                                                    " · ",
+                                                                                    p.size
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/app/admin/page.jsx",
+                                                                                lineNumber: 164,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, j, true, {
+                                                                        fileName: "[project]/app/admin/page.jsx",
+                                                                        lineNumber: 161,
+                                                                        columnNumber: 25
+                                                                    }, this))
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/admin/page.jsx",
+                                                                lineNumber: 159,
+                                                                columnNumber: 21
+                                                            }, this)
                                                         ]
                                                     }, i, true, {
                                                         fileName: "[project]/app/admin/page.jsx",
@@ -466,7 +525,7 @@ function AdminPage() {
                                                                 children: "✓ Verify & Confirm"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/admin/page.jsx",
-                                                                lineNumber: 164,
+                                                                lineNumber: 175,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -476,13 +535,13 @@ function AdminPage() {
                                                                 children: "✕ Reject"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/app/admin/page.jsx",
-                                                                lineNumber: 167,
+                                                                lineNumber: 178,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/app/admin/page.jsx",
-                                                        lineNumber: 163,
+                                                        lineNumber: 174,
                                                         columnNumber: 19
                                                     }, this),
                                                     o.status === "confirmed" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -491,7 +550,7 @@ function AdminPage() {
                                                         children: "Mark Shipped"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/page.jsx",
-                                                        lineNumber: 173,
+                                                        lineNumber: 184,
                                                         columnNumber: 19
                                                     }, this),
                                                     o.status === "shipped" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -500,7 +559,7 @@ function AdminPage() {
                                                         children: "Mark Delivered"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/page.jsx",
-                                                        lineNumber: 176,
+                                                        lineNumber: 187,
                                                         columnNumber: 19
                                                     }, this),
                                                     ![
@@ -513,7 +572,7 @@ function AdminPage() {
                                                         children: "✕ Cancel Order"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/page.jsx",
-                                                        lineNumber: 179,
+                                                        lineNumber: 190,
                                                         columnNumber: 19
                                                     }, this),
                                                     o.payment.refund?.owed && o.payment.refund.status !== "issued" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -523,13 +582,13 @@ function AdminPage() {
                                                         children: "✓ Mark Refund Issued"
                                                     }, void 0, false, {
                                                         fileName: "[project]/app/admin/page.jsx",
-                                                        lineNumber: 184,
+                                                        lineNumber: 195,
                                                         columnNumber: 19
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/app/admin/page.jsx",
-                                                lineNumber: 161,
+                                                lineNumber: 172,
                                                 columnNumber: 15
                                             }, this)
                                         ]
@@ -576,7 +635,7 @@ const Stat = ({ label, value, accent })=>/*#__PURE__*/ (0, __TURBOPACK__imported
                 children: value
             }, void 0, false, {
                 fileName: "[project]/app/admin/page.jsx",
-                lineNumber: 201,
+                lineNumber: 212,
                 columnNumber: 23
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -587,13 +646,13 @@ const Stat = ({ label, value, accent })=>/*#__PURE__*/ (0, __TURBOPACK__imported
                 children: label
             }, void 0, false, {
                 fileName: "[project]/app/admin/page.jsx",
-                lineNumber: 201,
+                lineNumber: 212,
                 columnNumber: 98
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/admin/page.jsx",
-        lineNumber: 201,
+        lineNumber: 212,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 _c1 = Stat;
@@ -608,7 +667,7 @@ const Field = ({ label, value, highlight })=>/*#__PURE__*/ (0, __TURBOPACK__impo
                 children: label
             }, void 0, false, {
                 fileName: "[project]/app/admin/page.jsx",
-                lineNumber: 204,
+                lineNumber: 215,
                 columnNumber: 8
             }, ("TURBOPACK compile-time value", void 0)),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -620,13 +679,13 @@ const Field = ({ label, value, highlight })=>/*#__PURE__*/ (0, __TURBOPACK__impo
                 children: value
             }, void 0, false, {
                 fileName: "[project]/app/admin/page.jsx",
-                lineNumber: 204,
+                lineNumber: 215,
                 columnNumber: 95
             }, ("TURBOPACK compile-time value", void 0))
         ]
     }, void 0, true, {
         fileName: "[project]/app/admin/page.jsx",
-        lineNumber: 204,
+        lineNumber: 215,
         columnNumber: 3
     }, ("TURBOPACK compile-time value", void 0));
 _c2 = Field;
@@ -761,19 +820,59 @@ const s = {
         gap: 12,
         marginBottom: 14
     },
-    items: {
+    itemsPanel: {
         display: "flex",
-        gap: 8,
-        flexWrap: "wrap",
+        flexDirection: "column",
+        gap: 14,
         marginBottom: 16
     },
-    itemChip: {
+    itemBlock: {
         background: "var(--surface-2)",
         border: "1px solid var(--border-2)",
+        borderRadius: 10,
+        padding: 12
+    },
+    itemMeta: {
+        display: "flex",
+        alignItems: "center",
+        gap: 8,
+        color: "#ddd",
+        fontSize: 13,
+        fontWeight: 600,
+        marginBottom: 10
+    },
+    colorDot: {
+        width: 12,
+        height: 12,
+        borderRadius: "50%",
+        border: "1px solid var(--border-2)",
+        flexShrink: 0
+    },
+    printThumbs: {
+        display: "flex",
+        gap: 10,
+        flexWrap: "wrap"
+    },
+    printThumbLink: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        gap: 6,
+        textDecoration: "none"
+    },
+    printThumbImg: {
+        width: 64,
+        height: 64,
+        objectFit: "cover",
         borderRadius: 8,
-        padding: "5px 10px",
-        color: "#bbb",
-        fontSize: 12
+        border: "1px solid var(--border-2)",
+        background: "#000"
+    },
+    printThumbLabel: {
+        color: "var(--text-mute)",
+        fontSize: 10,
+        textTransform: "capitalize",
+        textAlign: "center"
     },
     actions: {
         display: "flex",
@@ -1882,7 +1981,7 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$build$2f$polyfills$2f$process$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = /*#__PURE__*/ __turbopack_context__.i("[project]/node_modules/next/dist/build/polyfills/process.js [app-client] (ecmascript)");
 // Centralised fetch wrapper. Stores JWT in localStorage and attaches it.
-const API_BASE = ("TURBOPACK compile-time value", "http://localhost:5001/api") || "http://localhost:5000/api";
+const API_BASE = ("TURBOPACK compile-time value", "https://inkdropbackend.vercel.app/api") || "http://localhost:5000/api";
 function getToken() {
     if ("TURBOPACK compile-time falsy", 0) //TURBOPACK unreachable
     ;

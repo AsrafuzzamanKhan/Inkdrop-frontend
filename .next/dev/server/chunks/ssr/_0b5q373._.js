@@ -2459,7 +2459,7 @@ __turbopack_context__.s([
     ()=>setToken
 ]);
 // Centralised fetch wrapper. Stores JWT in localStorage and attaches it.
-const API_BASE = ("TURBOPACK compile-time value", "http://localhost:5001/api") || "http://localhost:5000/api";
+const API_BASE = ("TURBOPACK compile-time value", "https://inkdropbackend.vercel.app/api") || "http://localhost:5000/api";
 function getToken() {
     if ("TURBOPACK compile-time truthy", 1) return null;
     //TURBOPACK unreachable
