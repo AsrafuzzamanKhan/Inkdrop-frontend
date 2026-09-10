@@ -1,0 +1,169 @@
+/* [project]/app/globals.css [app-client] (css) */
+:root {
+  --brand: #e8c547;
+  --brand-dark: #c9941f;
+  --brand-soft: #e8c5471f;
+  --bg: #0a0a0a;
+  --surface: #141414;
+  --surface-2: #1c1c1c;
+  --border: #262626;
+  --border-2: #303030;
+  --text: #fff;
+  --text-dim: #999;
+  --text-mute: #666;
+  --ok: #4caf50;
+  --warn: #ff9800;
+  --info: #2196f3;
+  --danger: #ff6b6b;
+  --radius-lg: 20px;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --font-display: var(--font-space-grotesk), "Arial Black", sans-serif;
+  --font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+*, :before, :after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+input, textarea, button, select {
+  font-family: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: var(--brand);
+  color: #000;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.eyebrow {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--brand);
+  font-size: 12px;
+  font-weight: 700;
+  display: inline-block;
+}
+
+.btn {
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 800;
+  font-family: var(--font-body);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  transition: transform .15s, box-shadow .15s, opacity .15s;
+  display: inline-flex;
+}
+
+.btn:disabled {
+  opacity: .5;
+  cursor: not-allowed;
+}
+
+.btn:not(:disabled):hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--brand), var(--brand-dark));
+  color: #000;
+  box-shadow: 0 8px 24px #e8c5472e;
+}
+
+.btn-ghost {
+  color: var(--text-dim);
+  border: 1px solid var(--border-2);
+  background: none;
+}
+
+.btn-ghost:not(:disabled):hover {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.fade-up {
+  animation: .6s both fadeUp;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.grid-3 {
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 40px;
+  display: grid;
+}
+
+.grid-auto {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  display: grid;
+}
+
+@media (max-width: 720px) {
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .checkout-grid > :last-child {
+    order: -1;
+    position: static !important;
+  }
+
+  .admin-grid2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/*# sourceMappingURL=app_globals_css_1igg3k2._.single.css.map*/
